@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar>
+  <h1>
+    {{title}}
+  </h1>
+  <button md-button routerLink="welcome">Welcome</button>
+  <button md-button routerLink="room">Rooms</button>
+
+  <button md-button (click)="login()">Login</button>
+  <button md-button (click)="logout()">Logout</button>
+
+  <img *ngIf="user?.uid" class="userimg" src="{{user?.photoURL}}"> {{user?.name}}
+</md-toolbar>
+<router-outlet></router-outlet>
