@@ -1,0 +1,12 @@
+<form>
+  <input class="message-text" [(ngModel)]="newMessage" type="text" name="newMessageInput" placeholder="Message">
+  <button md-icon-button (click)="submitMessage()"><md-icon>input</md-icon></button>
+</form>
+
+
+<md-card *ngFor="let message of messages">
+  {{message.text}}
+  <br>
+  <md-icon>{{message.icon}}</md-icon>
+  <span class="username">{{message.username}}</span>
+</md-card>
